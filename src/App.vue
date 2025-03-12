@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="weather-app">
+    <h1>Weather App/Dashboard</h1>
+    <div class="search-box">
+      <input
+      type="text"
+      placeholder="Enter city name"
+      v-model="city"
+      @keyup.enter="fecthWeather"
+      />
+      <button @click="fetchWeather">Search</button>
+    </div>
+    <div class="weather-footer"></div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
 </script>
 
 <style>
